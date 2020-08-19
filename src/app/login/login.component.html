@@ -1,0 +1,57 @@
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  text-center m-auto p-2" style="margin-top: 85px !important;">
+  <div class="card-transparent border border-primary " style="background-color:cornsilk;">
+    <div class="card-title">
+      <h2>
+        Sign In:
+      </h2>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="card-body border border-primary ">
+        <div class="row form-group">
+          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2 text-right ">
+            <label for="txtUsername" style="font-style:oblique;font-weight:bolder;">Username</label>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
+            <input type="text" id="txtUsername" placeholder="Username" formControlName="userName" [(ngModel)]="loginobj.Username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userName.errors } "/>
+            <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+              <div *ngIf="f.userName.errors.required">UserName is required</div>
+          </div>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2 text-right ">
+            <label for="txtPassword" style="font-style:oblique;font-weight:bolder; ">Password</label>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
+            <input type="password" id="txtPassword" placeholder="Password" [(ngModel)]="loginobj.Password" formControlName="password" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+            <input type="checkbox" id="chkFP" style="height:12px;" />
+            <label class="form-check-label" for="chkFP">Remember me</label>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+            <a href="#" class="a" style="color:burlywood; font-weight: bold;">Forgot Password</a>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4 ">
+            <button class="btn btn-primary mr-1">Submit</button>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4 ">
+            <input type="reset" value="Reset" id="btnReset" class="btn btn-warning" />
+          </div>
+        </div>
+      </div>
+    </form>
+    <div >
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8  " style="margin-left: 110px;">
+        <div class="btn btn-info " (click)="GotoRegistration()">Registration</div>
+      </div>
+    </div>
+  </div>
+  </div>

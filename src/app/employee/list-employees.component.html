@@ -1,0 +1,56 @@
+<div class="card-group" *ngFor="let emp of Employee" style="margin-top: 15px;">
+  <div class="card col-sm-8 col-lg-8 col-md-8 offset-md-2 offset-lg-2 offset-sm-2">
+    <div class="card-body">
+      <h4 class="card-title">{{ emp.First_Name }}</h4>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4">
+            <img [src]="emp.Photourl" />
+          </div>
+          <div class="col-sm-8 col-lg-8 col-md-8 col-xs-8">
+            <div class="row">
+              <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4 ">
+               <span style="font-size: large;">Last Name</span>  :{{ emp.Last_Name }}
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4">
+                Username :{{ emp.Username }}
+              </div>
+
+            </div>
+
+              <div class="row">
+                <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4">
+                  Gender :{{ emp.Gender | uppercase }}
+                </div>
+
+
+              </div>
+              <div class="row">
+                <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4">
+                  DOB :{{ emp.DateOfBirth }}
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4">
+                  City :{{ emp.City }}
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4">
+                  Country :{{ emp.Country }}
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
