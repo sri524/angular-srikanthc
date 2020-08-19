@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root',
 })
 export class EmpserviceService {
-  private url = '../assets/data/MOCK_DATA.json';
+  private url = '../assets/data/MOCK-DATA.json';
   constructor(private http: HttpClient) {}
   getemp(): Observable<Empdetails[]> {
     return this.http.get<Empdetails[]>(this.url);
